@@ -1,0 +1,16 @@
+server:
+  port: 9001
+spring:
+  application:
+    name: nacos-payment-provider
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+#配置nacos监控
+management:
+  endpoints:
+    web:
+      exposure:
+        #默认只公开【/health和/info】两个端点，要想暴露所有端点只需设置成"*"
+        include: '*'

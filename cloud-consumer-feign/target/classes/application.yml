@@ -1,0 +1,19 @@
+server:
+  port: 8004
+spring:
+  application:
+    name: cloud-consumer-feign
+  cloud:
+    compatibility-verifier:
+      enabled: false
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+#配置feign日志
+logging:
+  level:
+    com.java.springboot.service: debug
